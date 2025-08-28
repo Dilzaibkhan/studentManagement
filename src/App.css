@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+:root{
+  --bg:#f4f6f8;
+  --card:#ffffff;
+  --muted:#666;
+  --accent:#2563eb;
+}
+
+*{ box-sizing: border-box; }
+body{
+  margin:0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color:#111;
+ /* background-color: #023C40; */
+ /* background-image: url(https://images.pexels.com/photos/45853/grey-crowned-crane-bird-crane-animal-45853.jpeg); */
+ background-repeat: no-repeat;
+ background-size: cover;
+
+}
+
+/* NAV */
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 18px;
+  background:linear-gradient(90deg,#0f172a,#0b1220);
+  color:#fff;
+}
+.brand{
+  color:#fff;
+  font-weight:700;
+  text-decoration:none;
+  margin-right:12px;
+}
+.nav-left { display:flex; gap:10px; align-items:center; }
+.nav-link{
+  color: rgba(255,255,255,0.9);
+  text-decoration:none;
+  padding:6px 10px;
+  border-radius:6px;
+  font-size:14px;
+}
+.nav-link:hover{ background:rgba(255,255,255,0.05); }
+.nav-right{ display:flex; align-items:center; gap:8px; }
+
+.btn-ghost{
+  background:transparent;
+  color:#fff;
+  border:1px solid rgba(255,255,255,0.12);
+  padding:6px 10px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+/* layout */
+.app-wrap{ padding: 20px; min-height: calc(100vh - 60px); }
+
+.center{
+  display:flex;
+  justify-content:center;
+  padding: 24px;
+}
+
+.card{
+  background: var(--card);
+  padding:18px;
+  border-radius:12px;
+  box-shadow: 0 6px 18px rgba(12, 24, 48, 0.08);
+  width:100%;
+}
+
+/* small helpers */
+.stack{ display:flex; flex-direction:column; gap:10px; margin-top:8px; }
+input[type="text"], input, select, textarea{
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #e5e7eb;
+  font-size:15px;
+  width:100%;
+}
+textarea{ min-height:80px; resize:vertical; }
+button{
+  padding:10px 12px;
+  border-radius:8px;
+  background: var(--accent);
+  color:white;
+  border:none;
+  cursor:pointer;
+}
+button:hover{ opacity:0.95; }
+
+.row{ display:flex; gap:12px; flex-wrap:wrap; margin-top:12px; }
+.stat{ background:#f8fafc; padding:12px; border-radius:8px; flex:1; text-align:center; }
+.item{ background:#fbfcff; padding:10px; margin-top:10px; border-radius:8px; border:1px solid #eef2ff; }
+
+/* small text */
+small{ color:var(--muted); }
+
+/* responsive */
+@media (max-width:720px){
+  .row{ flex-direction:column; }
+  .nav-left{ flex-wrap:wrap; gap:6px; }
+  .card{ padding:14px; }
+}
